@@ -1,0 +1,130 @@
+<header>
+
+    <script src="/js/styles.js"></script>
+
+    <div class="fix-header">
+        <div class="top-header">
+            <div class="burger-menu">
+                <i class="fa fa-bars burger"></i>
+            </div>
+
+            <div class="burger-menu-displayed">
+                <a href="/auth/login">Mi cuenta</a>
+                <ul class="perros">
+                    <p>Perros <i class="fa-solid fa-angle-down"></i></p>
+                    <li><a href="/products/perro/alimentos">Alimentos</a></li>
+                    <li><a href="/products/perro/accesorios">Accesorios</a></li>
+                    <li><a href="/products/perro/esteticaehigiene">Estética e Higiene</a></li>
+                    <li><a href="/products/perro/salud">Salud</a></li>
+                </ul>
+                <ul class="gatos">
+                    <p>Gatos <i class="fa-solid fa-angle-down"></i></p>
+                    <li><a href="/products/gato/alimentos">Alimentos</a></li>
+                    <li><a href="/products/gato/accesorios">Accesorios</a></li>
+                    <li><a href="/products/gato/esteticaehigiene">Estética e Higiene</a></li>
+                    <li><a href="/products/gato/salud">Salud</a></li>
+                </ul>
+                <ul class="roedores">
+                    <p>Roedores <i class="fa-solid fa-angle-down"></i></p> 
+                    <li><a href="/products/roedor/alimentos">Alimentos</a></li>
+                    <li><a href="/products/roedor/accesorios">Accesorios</a></li>
+                    <li><a href="/products/roedor/esteticaehigiene">Estética e Higiene</a></li>
+                    <li><a href="/products/roedor/salud">Salud</a></li>
+                </ul>
+                <ul class="aves">
+                    <p>Aves <i class="fa-solid fa-angle-down"></i></p> 
+                    <li><a href="/products/ave/alimentos">Alimentos</a></li>
+                    <li><a href="/products/ave/accesorios">Accesorios</a></li>
+                    <li><a href="/products/ave/esteticaehigiene">Estética e Higiene</a></li>
+                    <li><a href="/products/ave/salud">Salud</a></li>
+                </ul>
+            </div>
+
+            <div class="logo"> 
+                <a href="/"><img src="/images/logo.jpg" alt="Logo de Patitas y Bigotes"></a>
+            </div>
+
+            <div class="navbar-celphone">
+                <% if(locals.isLogged) { %>
+                    <nav class="user-logged-navbar">
+                        <a href="/auth/profile"><img src="/images/avatars/<%= locals.userLogged.avatar %>" alt="" class="profile-avatar"></a>
+                    </nav>
+                <% } else { %>
+                    <nav class="login-navbar">
+                        <a href="/auth/login"><i class="fa-solid fa-right-to-bracket"></i></a>
+                        <a href="/auth/register"><i class="fa-regular fa-id-card"></i></a>
+                    </nav>
+                <% } %>
+            </div>
+
+            <div class="navbar-tablet">
+                <% if(locals.isLogged) { %>
+                    <nav class="user-logged-navbar-tablet">
+                        <a href="/auth/profile"><img src="/images/avatars/<%= locals.userLogged.avatar %>" alt="" class="profile-avatar"></a>
+                    </nav>
+                <% } else { %>
+                    <nav>
+                        <ul class="login-navbar-tablet">
+                            <li class="register"><a href="/auth/register">Crea tu cuenta <i class="fa-solid fa-user"></i></a></li>
+                            <li class="login"><a href="/auth/login">Ingresa <i class="fas fa-sign-in-alt"></i></a></li>
+                        </ul>
+                    </nav>
+                <% } %>
+            </div>
+
+            <nav class="cart">
+                <a href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+            </nav>
+        </div>
+
+        <div class="center-header">
+            <form action="/search" method="GET" class="buscador">
+                <input type="text" name="keywords" placeholder="Buscar productos, marcas y más..." class="placeh"><i class="fa fa-search"></i>
+            </form>
+        </div>
+    </div>
+
+    <ul class="site-navbar">
+        <li class="perros">Perros <i class="fa-solid fa-angle-down"></i></li>
+        <li class="gatos">Gatos <i class="fa-solid fa-angle-down"></i></li>
+        <li class="roedores">Roedores <i class="fa-solid fa-angle-down"></i></li>
+        <li class="aves">Aves <i class="fa-solid fa-angle-down"></i></li>
+        <li class="marcas">Marcas <i class="fa-solid fa-angle-down"></i></li>
+    </ul>
+
+    <div class="site-navbar-displayed">
+        <ul class="perros">
+            <li><a href="/products/perro/alimentos">Alimentos</a></li>
+            <li><a href="/products/perro/accesorios">Accesorios</a></li>
+            <li><a href="/products/perro/esteticaehigiene">Estética e Higiene</a></li>
+            <li><a href="/products/perro/salud">Salud</a></li>
+        </ul>
+        <ul class="gatos">
+            <li><a href="/products/gato/alimentos">Alimentos</a></li>
+            <li><a href="/products/gato/accesorios">Accesorios</a></li>
+            <li><a href="/products/gato/esteticaehigiene">Estética e Higiene</a></li>
+            <li><a href="/products/gato/salud">Salud</a></li>
+        </ul>
+        <ul class="roedores">
+            <li><a href="/products/roedor/alimentos">Alimentos</a></li>
+            <li><a href="/products/roedor/accesorios">Accesorios</a></li>
+            <li><a href="/products/roedor/esteticaehigiene">Estética e Higiene</a></li>
+            <li><a href="/products/roedor/salud">Salud</a></li>
+        </ul>
+        <ul class="aves">
+            <li><a href="/products/ave/alimentos">Alimentos</a></li>
+            <li><a href="/products/ave/accesorios">Accesorios</a></li>
+            <li><a href="/products/ave/esteticaehigiene">Estética e Higiene</a></li>
+            <li><a href="/products/ave/salud">Salud</a></li>
+        </ul>
+        <ul class="marcas">
+            <li><a href="/products/brands/1">Marca 1</a></li>
+            <li><a href="/products/brands/2">Marca 2</a></li>
+            <li><a href="/products/brands/4">Marca 4</a></li>
+            <li><a href="/products/brands/5">Marca 5</a></li>
+            <li><a href="/products/brands/7">Marca 7</a></li>
+            <li><a href="/products/brands/9">Marca 9</a></li>
+        </ul>
+    </div>
+
+</header>

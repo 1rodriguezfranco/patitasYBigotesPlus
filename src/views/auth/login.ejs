@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head") %> 
+    
+<body>
+    
+    <%- include("../partials/header") %>
+
+    <main>
+        <section class="main-section-login">
+            <div class="main-title-login">
+               </i><h2>Inicia Sesión</h2>
+            </div>
+
+                <h4 class="subtitle-login">Ingresa tu e-mail y contraseña!</h4>
+            
+            <form action="/auth/login" id="form-login" method="POST">
+                    <p class="email">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="E-mail" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.email ? oldData.email : null %>">
+                        <small class="error-msg-login"></small>
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="error-login"><%= errors.email.msg %></p>
+                        <% } %>
+                    </p>
+                    <p class="password">
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password" pattern=".{8,15}" placeholder="Contraseña" alt="strongPass" alt="alphanumeric" class="<%= locals.errors && errors.password ? 'is-invalid' : null %>">
+                        <small class="error-msg-login"></small>
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="error-login"><%= errors.password.msg %></p>
+                        <% } %>
+                    </p>
+                        <% if (locals.errors && errors.userLogin) { %>
+                        <p class="error-login"><%= errors.userLogin.msg %></p>
+                        <% } %>
+                        <p class="showpassword">
+                            <input  class="showpassword" type="button" name="showpassword" onclick="mostrar()" value="Mostrar contraseña">
+                        </p>   
+
+                        <script type="text/javascript">
+                            function mostrar() {
+                                let tipo = document.getElementById("password");
+                        
+                                if(tipo.type == "password") {
+                                    tipo.type = "text";
+                                } else {
+                                    tipo.type = "password"
+                                }
+                            }
+                        </script>
+                                 
+                <div class="recorder">
+                    <input type="checkbox" name="rememberUser" value="Recordarme"> 
+                    <label for="rememberUser">Recordarme</label>
+                </div>
+             
+                <div class="enter-buttom-login">
+                    <button type="submit" id="submitBtn">Entrar<i class="fa-solid fa-paw"></i></button>
+                </div>
+
+                <div class="create-account">
+                    <p>¿Nuevo cliente?</p>
+                    <a href="/auth/register">Crear cuenta</a>
+                </div>
+
+                <div class="forgot-password">
+                    <p>¿Olvidaste tu contraseña?</p>
+                </div>
+
+                <div class="recover-password">
+                    <a href="/auth/recoverpassword">Recuperar contraseña...</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="/js/validations/login.js"></script>
+
+    <%- include("../partials/footer") %>
+
+</body>
+</html>

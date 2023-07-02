@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1",
+    "name": "Alimento Excellent Pollo y Arroz ",
+    "shortDescription": "",
+    "longDescription": "",
+    "mascota": "perro",
+    "categoria": "alimentos",
+    "marca": "purina",
+    "price": "12000",
+    "discount": "10",
+    "product_image": "product_image-1677351921229-198579949.jpg",
+    "finalPrice": 10800
+  },
+  {
+    "id": "2",
+    "name": "Alimento Excellent Pollo y Arroz",
+    "shortDescription": "Alimento para perros 7kg",
+    "longDescription": "Esta es la descripción amplia",
+    "mascota": "perro",
+    "categoria": "alimentos",
+    "marca": "purina",
+    "price": "12000",
+    "discount": "10",
+    "product_image": "product_image-1677351726784-826076731.jpg",
+    "finalPrice": 10800
+  },
+  {
+    "id": "31",
+    "name": "Rascador Kong Incline",
+    "shortDescription": "Rascador para gatos",
+    "longDescription": "Que tu michi disfrute mucho de este hermoso juguete desestresante",
+    "mascota": "gato",
+    "categoria": "accesorios",
+    "marca": "royalCanin",
+    "price": "6500",
+    "discount": "0",
+    "product_image": "product_image-1677358490905-426231940.jpg",
+    "finalPrice": 6500
+  }
+]

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head") %> 
+    
+<body>
+
+    <%- include("../partials/header") %>
+
+    <main class="infoProduct">
+
+        <article class="article">
+
+            <section class="section">
+            
+            <% if(locals.product) { %>
+
+                <h2><%= product.name %></h2>
+
+                <div class="preview">
+                    
+                    <img style="width: 100%;" src="/images/products/<%= product.image %>" class="producto">
+                    <p class="detalle"><%= locals.product && product.short_description ? product.short_description : null %></p>
+                    <p class="precioanterior">$ <%= product.price %></p>
+                    <p class="precioactual">$ <%= product.final_price %></p>
+
+                    <div class="buttons">
+                        <button type="button" class="agregarAlCarrito">Agregar al carrito</button>
+                        <button type="button" class="comprarAhora">Comprar ahora</button>
+                    </div>
+
+                </div>
+
+                <div class="edit-delete">
+                    <!-- VISIBLE PARA ADMINS -->
+                    <a href="/products/edit/<%= product.id %>"><button class="editar">Editar</button></a>
+                    <form action="/products/details/<%= product.id %>?_method=DELETE" method="post">
+                        <button type="submit" class="eliminar">Eliminar</button>
+                    </form>
+                </div>
+
+            </section>
+
+            <section class="detalleTablet">
+
+                <div class="detalleProductoAmpliado">
+
+                    <p class="detalleAmplio"><%= locals.product && product.long_description ? product.long_description : null %></p>
+
+                    <div class="buttons">
+                        <button type="button" class="agregarAlCarrito">Agregar al carrito</button>
+                        <button type="button" class="comprarAhora">Comprar ahora</button>
+                    </div>
+
+                    <div class="edit-delete">
+                        <!-- VISIBLE PARA ADMINS -->
+                        <a href="/products/edit/<%= product.id %>"><button class="editar">Editar</button></a>
+                        <form action="/products/details/<%= product.id %>?_method=DELETE" method="post" class="form">
+                            <button type="submit" class="eliminar">Eliminar</button>
+                        </form>
+                    </div>
+
+                </div>
+
+            <% } %>
+
+            </section>
+
+        </article>
+
+    </main>
+
+    <%- include("../partials/footer") %>
+
+</body>
+</html>
+
