@@ -131,6 +131,15 @@ const authController = {
                 user
             })
         } else {
+            delete user.password;
+            req.session.userLogged = {
+                id: req.params.id,
+				first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                password: user.password,
+                avatar: userAvatar
+			};
             db.User.update(
 				{
 					first_name: req.body.first_name,
