@@ -73,20 +73,20 @@ const authController = {
         let validUser;
         for(let i = 0; i < allUsers.length; i++){
             if(allUsers[i].email == req.body.email){
-                validUserEmail = true
+                validUserEmail = true;
                 validUser = allUsers[i];
             };
         };
-        if(bcrypt.compareSync(req.body.password, validUser.password)){
+        if(validUserEmail && bcrypt.compareSync(req.body.password, validUser.password)){
             validUserPassword = true;
         };
         if(validUserEmail && validUserPassword){
-            delete validUser.password
+            delete validUser.password;
             req.session.userLogged = validUser;
             if(req.body.rememberUser){
-                res.cookie('userEmail', req.body.email, { maxAge: (999 * 999) * 999})
-            }
-            return res.redirect("/auth/profile")
+                res.cookie('userEmail', req.body.email, { maxAge: (999 * 999) * 999});
+            };
+            return res.redirect("/auth/profile");
         } else {
             return res.render("./auth/login", {
                 errors: {
