@@ -1,164 +1,84 @@
-
-/*.formulario{
-    background-color:rgb(255, 195, 0); 
-    opacity: 90%;
-    border-bottom: solid 1px rgb(157, 153, 153);
-}*/
-
-.contenedor-registro{
-    display: block; 
-    padding: 5px;
-    font-size: 15px;
-    margin-left: 50px; 
-    margin-right: 50px;
-    margin-top: 107px;
-    margin-bottom: 5px;
-
+.container_register{
+    margin-top: 102.5px;
 }
 
-.contenedor-mail{
+.container_register .container_register_form{
     display: flex;
-    justify-content: center;
-    padding: 5px;
-    font-size: 15px;
-    margin: 10px; 
-    
-    
-
-}
-
-.registro{
-    width:70vw;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    padding: 7px;
-    color: rgb(31, 97, 141 );
-   
-
-}
-/*input{
-    color:rgb(31, 97, 141 );
-    padding-left: 3px;
-    font-size: 13px;
-
-revisar en vista ejs, ya que al no tener clase definida, afecta a componentes del login
-   
-}*/
-.registro2{
-    width: 60vw;
-    justify-content: center;
-    padding: 10px;
-    align-content: center;
-    color: rgb(31, 97, 141 );
-    
 }
 
-.buttons{
-    justify-content: center;
-    width: 35%;
-    font-size: 13px;
-
+.container_register .container_register_form .title_register_form #title_register_form_h1{
+    font-size: 1.4rem;
 }
 
-/*form div input{ 
-    width: 80%;
-    
-revisar en vista ejs, ya que al no tener clase definida, afecta a componentes del login
-}*/
-.envios{
+.container_register .container_register_form .subtitle_register_form{
     display: flex;
-    justify-content: space-around;
-
 }
 
-
-.links{
-   width: 85%;
-   background-color: rgb(31, 97, 141 );
-   color:whitesmoke;
-   align-items: center;
-}
-.links2{
-    width: 85%;
-    background-color:whitesmoke;
+.container_register .container_register_form .subtitle_register_form #subtitle_register_form_h2{
+    font-size: 0.8rem;
+    font-weight: lighter;
     color: red;
-    align-items: center;
- }
+}
 
-.buttons2{
+.container_register .container_register_form #register_form{
     display: flex;
-    justify-content: center;
-    color:rgb(31, 97, 141 );
-    font-size: 13px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.container_register .container_register_form #register_form .form-group{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.container_register .container_register_form #register_form .form-group .input_register{
+    border-radius: 3px;
+    border: 1.5px solid gray;
+    padding: 5px;
+}
+
+.container_register .container_register_form #register_form .form-group .input_avatar{
+    font-size: 0.9rem;
+}
+
+.container_register .container_register_form #register_form .container_buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 7.5px;
+}
+
+.container_register .container_register_form #register_form .container_buttons .register_button_submit{
+    background-color: rgba(110, 215, 110, 0.268);
+    font-size: 1rem;
+    padding: 3px;
+    border-radius: 3px;
+    border: 1.5px solid gray;
+}
+
+.container_register .container_register_form #register_form .container_buttons .register_button_reset{
+    background-color: rgba(215, 110, 110, 0.268);
+    font-size: 1rem;
+    padding: 3px;
+    border-radius: 3px;
+    border: 1.5px solid gray;
+}
 
 
-}
-button{
-    color:rgb(31, 97, 141 );
-}
 @media (min-width: 460px){
+    .container_register{
+        margin-top: 10px;
+    }
+}
 
-    .contenedor-registro{
-        display: flex; 
-        justify-content: space-around;
-        align-items: center;
-        padding: 5px;
-        font-size: 15px;
-        margin-left: 30px;
-        margin-right: 20px; 
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    .contenedor-mail{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 5px;
-        font-size: 15px;
-        margin: 10px; 
-    }
-    .registro2{
-        width:38vw;
-        padding: 10px;
-        align-content: center;
-        color: rgb(31, 97, 141 );
-        
-    }
-    .registro{
-        width:48vw;
-        align-items: center;
-        padding: 7px;
-        color:rgb(31, 97, 141 );
-       
-}
-}
+
 @media (min-width: 769px){
-    .contenedor-registro{
-        display: flex; 
-        justify-content: space-around;
-        padding: 5px;
-        font-size: 18px;
-        margin-left: 90px;
-        margin-right: 80px; 
-        margin-top: 5px;
-        margin-bottom: 5px;
+    .container_register .container_register_form #register_form .form-group{
+        width: 325px;
     }
-    .contenedor-mail{
-        display: flex;
-        justify-content: center;  
-        align-items: center;
-        padding: 5px;
-        font-size: 18px;   
-    }
-    .registro2{
-        width:300px;
-        padding: 10px;
-        align-content: center;
-        color: rgb(31, 97, 141 );    
-    }
-    .registro{
-        width:350px;
-        align-items: center;
-        padding: 7px;
-        color:rgb(31, 97, 141 );     
-}   
 }
