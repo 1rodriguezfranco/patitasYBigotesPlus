@@ -1,4 +1,4 @@
-const form = document.getElementById('product-edit-form');
+const form = document.getElementById('product_edit_form');
 const inputs = {
   name: document.getElementById('name'),
   short_description: document.getElementById('short_description'),
