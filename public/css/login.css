@@ -3,7 +3,7 @@
     padding: 20px 0px;
 }
 .main-title-login h2 {
-    font-size: 19px;
+    font-size: 1.4rem;
     margin-bottom: 20px;
 }
 .main-title-login, .subtitle-login{
@@ -13,7 +13,7 @@
     line-height: 1px;
 }
 .subtitle-login {
-    font-size: 16.5px;
+    font-size: 1rem;
     color: rgb(31, 97, 141 );
 }
 .main-title-login i {
@@ -114,8 +114,6 @@
 }
 
 
-
-
 /* New Password */ 
 h2 {
     font-size: 19px;
@@ -160,11 +158,6 @@ h2 {
 .body-new-password {
     background-color: whitesmoke;
 }
-
-
-
-
-
 
 
 /* Recover Password */
@@ -223,13 +216,6 @@ h2 {
     }
     /* Login */
 
-    .main-title-login h2 {
-        font-size: 21px;
-    }
-    .subtitle-login {
-        font-size: 18px;
-        margin-top: 3px;
-    }
     .email input, .password input {
         font-size: 17.5px;
         width: 240px;
@@ -298,50 +284,29 @@ h2 {
     .new-password, .confirm-new-password {
         margin: 18px;
     }
-   
 }
-
 
 
 @media (min-width: 769px){
 
     /* Login */
-
-    .main-title-login h2, .email, .password{
-        font-size: 25px;
-    }
     .subtitle-login{
         margin-top: 8px;
         margin-bottom: 20px;
-        font-size: 22px;
     } 
     .recorder {
         position: relative;
         right: 70px;
     }
-    .recorder input, .recorder label {
-        font-size: 18px;
-    }
     .email input, .password input {
-        font-size: 20px;
         width: 280px;
     }
     .showpassword input {
-        font-size: 17px;
         width: 160px;
         height: 25px;
     }
-    .create-account, .recover-password, .forgot-password, .enter-buttom-login, .recorder {
-        font-size: 19.5px;
-    }
     .create-account p, .create-account a {
         margin-bottom: 3px;
-    }
-    .enter-buttom-login i {
-        font-size: 18px;
-    }
-    .enter-buttom-login button {
-        font-size: 18px;
     }
     
 
