@@ -1,0 +1,91 @@
+.container_create_product{
+    margin-top: 102.5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.container_create_product .create_product_title{
+    font-size: 1.4rem;
+}
+
+.container_create_product #product_create_form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.container_create_product #product_create_form .form-group{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 10px;  
+}
+
+.container_create_product #product_create_form .form-group .input_create_product{
+    border-radius: 3px;
+    border: 1.5px solid gray;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+.container_create_product #product_create_form .form-group .input_create_product_textarea{
+    border-radius: 3px;
+    border: 1.5px solid gray;
+    padding: 7.5px;
+    font-size: 0.9rem;
+    height: 85px;
+}
+
+.container_create_product #product_create_form .form-group .input_create_product_select{
+    padding: 1px;
+    font-size: 0.9rem;
+}
+
+.container_create_product #product_create_form .create_product_buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container_create_product #product_create_form .create_product_buttons button{
+    border-radius: 3px;
+    border: 1.5px solid gray;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+.container_create_product #product_create_form .create_product_buttons .create_product_button_submit{
+    background-color: rgba(110, 215, 110, 0.268);
+}
+
+.container_create_product #product_create_form .create_product_buttons .create_product_button_reset{
+    background-color: rgba(215, 110, 110, 0.268);
+}
+
+@media (min-width: 460px){
+    .container_create_product{
+        margin-top: 10px;
+    }
+    .container_create_product #product_create_form {
+        width: 340px;
+    }
+    .container_create_product #product_create_form .form-group .input_create_product_select{
+        width: 60%;
+    }
+}
+
+@media (min-width: 769px){
+    .container_create_product #product_create_form{
+        width: 450px;
+    }
+    .container_create_product #product_create_form .form-group .input_create_product_select{
+        width: 40%;
+    }
+    .container_create_product #product_create_form .create_product_buttons button{
+        font-size: 1.1rem;
+    }
+}
