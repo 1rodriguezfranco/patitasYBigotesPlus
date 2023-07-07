@@ -1,0 +1,73 @@
+.container_auth_edit{
+    margin-top: 102.5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.container_auth_edit #title h1{
+    font-size: 1.4rem;
+}
+
+.container_auth_edit form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.container_auth_edit form .form-group{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 10px;  
+}
+
+.container_auth_edit form .form-group .input_auth_edit{
+    border-radius: 3px;
+    border: 1.5px solid gray;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+.container_auth_edit form .auth_edit_buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container_auth_edit form .auth_edit_buttons button{
+    border-radius: 3px;
+    border: 1.5px solid gray;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+.container_auth_edit form .auth_edit_buttons .auth_edit_button_edit{
+    background-color: rgba(110, 215, 110, 0.268);
+}
+
+.container_auth_edit form .auth_edit_buttons .auth_edit_button_delete{
+    background-color: rgba(215, 110, 110, 0.268);
+}
+
+@media (min-width: 460px){
+    .container_auth_edit{
+        margin-top: 10px;
+    }
+    .container_auth_edit form {
+        width: 340px;
+    }
+}
+
+@media (min-width: 769px){
+    .container_auth_edit form {
+        width: 340px;
+    }
+
+    .container_auth_edit form .auth_edit_buttons button{
+        font-size: 1.1rem;
+    }
+}
