@@ -134,6 +134,7 @@ header .center-header form{
     border: 1px solid gray;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 2px;
     margin-bottom: 4px;
 }
