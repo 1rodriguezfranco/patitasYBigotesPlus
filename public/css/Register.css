@@ -36,6 +36,26 @@
     flex-direction: column;
 }
 
+.container_register .container_register_form #register_form .form-group .send_password{
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container_register .container_register_form #register_form .form-group .send_password input{
+    border: none;
+    width: 90%;
+}
+
+.container_register .container_register_form #register_form .form-group .send_password i{
+    font-size: 1.1rem;
+    color: gray;
+    padding-right: 2px;
+}
+
 .container_register .container_register_form #register_form .form-group .input_register{
     border-radius: 3px;
     border: 1.5px solid gray;
