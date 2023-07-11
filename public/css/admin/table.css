@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    text-align: center;
 }
 
 .admin_table .admin_title{
@@ -25,7 +26,13 @@
 }
 
 .admin_table .table div{
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(184, 181, 181, 0.523);
+}
+
+.admin_table .table div.users{
+    border-bottom: none;
 }
 
 .admin_table .table div h1{
@@ -35,10 +42,6 @@
 
 .admin_table .table div h1 i{
     font-size: 0.8rem;
-}
-
-.admin_table .table div section{
-    padding-left: 10px;
 }
 
 .admin_table .table div section p{
@@ -53,4 +56,15 @@
     border: 1.5px solid rgb(73, 73, 73);
     border-radius: 3px;
     padding: 3px 4px;
+}
+
+@media (min-width: 769px){
+    .admin_table .table{
+        width: 325px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: start;
+    }
+
 }
