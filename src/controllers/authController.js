@@ -50,7 +50,8 @@ const authController = {
                 last_name: req.body.last_name,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
-                avatar: userAvatar
+                avatar: userAvatar,
+                admin: 0
             };
             db.User.create(userToCreate)
                 .then(()=>{ return res.redirect("/auth/login") })
@@ -138,7 +139,8 @@ const authController = {
                 last_name: req.body.last_name,
                 email: req.body.email,
                 password: user.password,
-                avatar: userAvatar
+                avatar: userAvatar,
+                admin: user.admin
 			};
             db.User.update(
 				{
@@ -146,7 +148,8 @@ const authController = {
                     last_name: req.body.last_name,
                     email: req.body.email,
                     password: user.password,
-                    avatar: userAvatar
+                    avatar: userAvatar,
+                    admin: user.admin
 				},
 				{
 					where: {id: req.params.id}

@@ -25,7 +25,7 @@
                       <input type="text" id="first_name" name="first_name" class="input_register <%= locals.errors && errors.first_name ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.first_name ? oldData.first_name : null %>">
                       <small class="error-msg"></small>
                       <% if (locals.errors && errors.first_name) { %>
-                        <p class="text-danger"><%= errors.first_name.msg %></p>
+                        <p style="color: red;"><%= errors.first_name.msg %></p>
                       <% } %>
                     </div>
 
@@ -34,7 +34,7 @@
                         <input type="text" id="last_name" name="last_name" class="input_register <%= locals.errors && errors.last_name ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.last_name ? oldData.last_name : null %>">
                         <small class="error-msg"></small>
                         <% if (locals.errors && errors.last_name) { %>
-                          <p class="text-danger"><%= errors.last_name.msg %></p>
+                          <p style="color: red;"><%= errors.last_name.msg %></p>
                         <% } %>
                       </div>
 
@@ -43,7 +43,7 @@
                         <input type="email" id="email" name="email" class="input_register <%= locals.errors && errors.email ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.email ? oldData.email : null %>">
                         <small class="error-msg"></small>
                         <% if (locals.errors && errors.email) { %>
-                            <p class="text-danger"><%= errors.email.msg %></p>
+                            <p style="color: red;"><%= errors.email.msg %></p>
                         <% } %>
                       </div>
 
@@ -52,7 +52,7 @@
                         <div class="send_password"><input type="password" id="password" name="password" class="input_register <%= locals.errors && errors.password ? 'is-invalid' : null %>"><i class="fa-regular fa-eye" onclick="mostrar()"></i></div>
                         <small class="error-msg"></small>
                         <% if (locals.errors && errors.password) { %>
-                            <p class="text-danger"><%= errors.password.msg %></p>
+                            <p style="color: red;"><%= errors.password.msg %></p>
                         <% } %>
 
                         <script type="text/javascript">
@@ -74,7 +74,7 @@
                         <input type="password" id="confirmPassword" name="confirmPassword" class="input_register <%= locals.errors && errors.confirmPassword ? 'is-invalid' : null %>">
                         <small class="error-msg"></small>
                         <% if (locals.errors && errors.confirmPassword) { %>
-                            <p class="text-danger"><%= errors.confirmPassword.msg %></p>
+                            <p style="color: red;"><%= errors.confirmPassword.msg %></p>
                         <% } %>
                     </div>
 
@@ -83,7 +83,7 @@
                         <input type="file" id="avatar" name="avatar" class="input_avatar <%= locals.errors && errors.avatar ? 'is-invalid' : null %>">
                         <small class="error-msg"></small>
                         <% if(locals.errors && errors.avatar) { %>
-                            <p class="text-danger"><%= errors.avatar.msg %></p>
+                            <p style="color: red;"><%= errors.avatar.msg %></p>
                         <% } %>    
                     </div>
 
@@ -96,8 +96,6 @@
 
             </div>
     </div>
-
-    <script src="/js/validations/register.js"></script>
 
     <%- include("../partials/footer") %>
 
