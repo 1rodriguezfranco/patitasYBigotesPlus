@@ -1,1 +1,69 @@
-<p>Estas en la tabla</p>
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head") %> 
+
+<body>
+
+    <%- include("../partials/header") %>
+
+    <main class="admin_table">
+
+        <h1 class="admin_title">¡Hola @admin!</h1>
+        <p class="admin_message">Administra Patitas y Bigotes</p>
+
+        <div class="table">
+
+            <div class="products">
+                <h1>Productos <i class="fa-solid fa-angle-down"></i></h1>
+                <section>
+                    <p><a href="" class="create">Crear</a></p>
+                    <p><a href="" class="update">Editar</a></p>
+                    <p><a href="" class="delete">Eliminar</a></p>
+                </section>
+            </div>
+
+            <div class="pets">
+                <h1>Mascotas <i class="fa-solid fa-angle-down"></i></h1>
+                <section>
+                    <p><a href="" class="create">Crear</a></p>
+                    <p><a href="" class="update">Editar</a></p>
+                    <p><a href="" class="delete">Eliminar</a></p>
+                </section>
+            </div>
+
+            <div class="categories">
+                <h1>Categorías <i class="fa-solid fa-angle-down"></i></h1>
+                <section>
+                    <p><a href="" class="create">Crear</a></p>
+                    <p><a href="" class="update">Editar</a></p>
+                    <p><a href="" class="delete">Eliminar</a></p>
+                </section>
+            </div>
+
+            <div class="brands">
+                <h1>Marcas <i class="fa-solid fa-angle-down"></i></h1>
+                <section>
+                    <p><a href="" class="create">Crear</a></p>
+                    <p><a href="" class="update">Editar</a></p>
+                    <p><a href="" class="delete">Eliminar</a></p>
+                </section>
+            </div>
+
+            <div class="users">
+                <h1>Usuarios <i class="fa-solid fa-angle-down"></i></h1>
+                <section>
+                    <p><a href="" class="admins">Administradores</a></p>
+                    <p><a href="" class="delete">Eliminar</a></p>
+                </section>
+            </div>
+
+        </div>
+
+    </main>
+
+    <%- include("../partials/footer") %>
+
+</body>
+
+</html>
