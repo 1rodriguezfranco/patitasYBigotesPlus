@@ -33,6 +33,7 @@ app.set ("views", path.join(__dirname, "views"));
 // ************ Route System require and use() ************
 const mainRouter = require("./routes/mainRoutes");
 const authRouter = require("./routes/authRoutes");
+const adminRouter = require("./routes/adminRoutes");
 const productsRouter = require("./routes/productsRoutes");
 
 // ************ Route System APIs ************
@@ -41,6 +42,7 @@ const apiProductsRouter = require('./routes/api/products');
 
 app.use("/", mainRouter);
 app.use("/auth", authRouter);
+app.use("/admin", adminRouter);
 app.use("/products", productsRouter);
 
 app.use('/api/users',apiUsersRouter);
