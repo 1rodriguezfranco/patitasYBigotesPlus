@@ -60,11 +60,16 @@
 
 @media (min-width: 769px){
     .admin_table .table{
-        width: 325px;
+        width: 850px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         text-align: start;
     }
 
+    .admin_table .table div{
+        padding-top: none;
+        padding-bottom: none;
+        border-bottom: none;
+    }
 }
