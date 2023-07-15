@@ -59,6 +59,10 @@
 }
 
 @media (min-width: 769px){
+    .admin_table{
+        padding: 35px 0px 60px 0px;
+    }
+
     .admin_table .table{
         width: 850px;
         display: flex;
