@@ -12,9 +12,11 @@ router.post("/create/pet", validationsCreatePBC, adminController.storePet);
 router.get("/update-delete/pet", adminController.updateDeletePet);
 
 router.get("/create/category", adminController.createCategory);
+router.post("/create/category", validationsCreatePBC, adminController.storeCategory);
 router.get("/update-delete/category", adminController.updateDeleteCategory);
 
 router.get("/create/brand", adminController.createBrand);
+router.post("/create/brand", validationsCreatePBC, adminController.storeBrand);
 router.get("/update-delete/brand", adminController.updateDeleteBrand);
 
 
