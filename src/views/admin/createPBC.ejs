@@ -33,7 +33,23 @@
             <ul>
                 <% if (locals.created) { %>
                     <% locals.created.forEach(function(i) { %>
-                        <li><%= i.name %></li>
+                        <li>
+
+                            <p><%= i.name %></p>
+
+                            <div>
+
+                                <a href="">
+                                    <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                </a>
+
+                                <form action="/admin/delete/<%= locals.route %>/<%= i.id %>?_method=DELETE" method="post">
+                                    <button><i class="fa-solid fa-trash-can"></i></button>
+                                </form>
+
+                            </div>
+
+                        </li>
                     <% }); %>
                 <% } %>
             </ul>

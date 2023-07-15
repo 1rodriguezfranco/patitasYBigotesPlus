@@ -30,6 +30,14 @@ const adminController = {
       let pets = await db.Pet.findAll();
       return res.render("./admin/pets/updateDeletePet.ejs", {pets});
     },
+    deletePet: (req, res) =>{
+      db.Pet.destroy({
+        where: {id: req.params.id}
+      })
+        .then(() =>{
+          res.redirect('/admin/create/pet');
+        })
+    },
     createCategory: async (req, res) => {
       let categories = await db.ProductCategory.findAll();
 	  	return res.render("./admin/createPBC", {created: categories, route: "category", singular: "categoría", plural: "Categorías"});
@@ -56,6 +64,14 @@ const adminController = {
       let categories = await db.ProductCategory.findAll();
       return res.render("./admin/categories/updateDeleteCategory.ejs", {categories});
     },
+    deleteCategory: (req, res) =>{
+      db.ProductCategory.destroy({
+        where: {id: req.params.id}
+      })
+        .then(() =>{
+          res.redirect('/admin/create/category');
+        })
+    },
     createBrand: async (req, res) => {
       let brands = await db.Brand.findAll();
 	  	return res.render("./admin/createPBC", {created: brands, route: "brand", singular: "marca", plural: "Marcas"});
@@ -81,6 +97,14 @@ const adminController = {
     updateDeleteBrand: async (req, res) => {
       let brands = await db.Brand.findAll();
       return res.render("./admin/brands/updateDeleteBrand.ejs", {brands});
+    },
+    deleteBrand: (req, res) =>{
+      db.Brand.destroy({
+        where: {id: req.params.id}
+      })
+        .then(() =>{
+          res.redirect('/admin/create/brand');
+        })
     }
 };
 
