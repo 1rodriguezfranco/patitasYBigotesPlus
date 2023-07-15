@@ -7,16 +7,18 @@
   
     <%- include("../partials/header") %>
     
+    <% if(locals.toEdit) { %>
+
     <div class="admin_createPetBrandCategory">
 
         <section class="creation_form">
 
-            <h1>Agregue a una nueva <%= locals.singular %></h1>
+            <h1>Modifique la <%= locals.singular %> "<%= locals.toEdit.name %>"</h1>
 
-            <form action="/admin/create/<%= locals.route %>" id="creation_<%= locals.route %>_form" method="post">
+            <form action="/admin/update/<%= locals.route %>/<%= locals.toEdit.id %>?_method=PUT" id="update_<%= locals.route %>_form" method="post">
                 <div class="form-group">
                     <label for="name">Nombre de la <%= locals.singular %>:</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" value="<%= locals.toEdit ? locals.toEdit.name : null %>"">
                     <% if (locals.errors && errors.name) { %>
                     <p style="color: red;"><%= errors.name.msg %></p>
                     <% } %>
@@ -57,6 +59,8 @@
         </section>
 
     </div>
+
+    <% } %>
 
     <a href="/admin/table">Volver al tablero de administrador</a>
 
