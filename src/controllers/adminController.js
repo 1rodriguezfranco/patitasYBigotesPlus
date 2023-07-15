@@ -105,6 +105,10 @@ const adminController = {
         .then(() =>{
           res.redirect('/admin/create/brand');
         })
+    },
+    manageUsers: async (req, res) =>{
+      let users = await db.User.findAll();
+      return res.render("./admin/manageUsers.ejs", {users});
     }
 };
 

@@ -4,7 +4,6 @@ const router = express.Router();
 const adminController = require("../controllers/adminController");
 const validationsCreatePBC = require(path.join(__dirname, '../middlewares/validations/admin/validationCreatePBC.js'));
 
-
 router.get("/table", adminController.table);
 
 router.get("/create/pet", adminController.createPet);
@@ -21,6 +20,8 @@ router.get("/create/brand", adminController.createBrand);
 router.post("/create/brand", validationsCreatePBC, adminController.storeBrand);
 router.get("/update-delete/brand", adminController.updateDeleteBrand);
 router.delete("/delete/brand/:id", adminController.deleteBrand);
+
+router.get("/users", adminController.manageUsers);
 
 
 module.exports = router;
