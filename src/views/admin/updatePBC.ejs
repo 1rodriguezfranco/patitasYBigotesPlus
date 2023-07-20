@@ -9,9 +9,9 @@
     
     <% if(locals.toEdit) { %>
 
-    <div class="admin_createPetBrandCategory">
+    <div class="admin_managePetBrandCategory">
 
-        <section class="creation_form">
+        <section class="manage_form">
 
             <h1>Modifique la <%= locals.singular %> "<%= locals.toEdit.name %>"</h1>
 
@@ -37,18 +37,21 @@
                     <% locals.created.forEach(function(i) { %>
                         <li>
 
-                            <p><%= i.name %></p>
-
                             <div>
 
-                                <a href="/admin/update/<%= locals.route %>/<%= i.id %>">
-                                    <button><i class="fa-solid fa-pen-to-square"></i></button>
-                                </a>
+                                <p><%= i.name %></p>
 
-                                <form action="/admin/delete/<%= locals.route %>/<%= i.id %>?_method=DELETE" method="post">
-                                    <button><i class="fa-solid fa-trash-can"></i></button>
-                                </form>
+                                <div class="buttons">
 
+                                    <a href="/admin/update/<%= locals.route %>/<%= i.id %>">
+                                        <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                    </a>
+
+                                    <form action="/admin/delete/<%= locals.route %>/<%= i.id %>?_method=DELETE" method="post">
+                                        <button><i class="fa-solid fa-trash-can"></i></button>
+                                    </form>
+
+                                </div>
                             </div>
 
                         </li>
@@ -62,8 +65,9 @@
 
     <% } %>
 
-    <a href="/admin/table">Volver al tablero de administrador</a>
-
+    <div class="return">
+        <a href="/admin/table" class="returnAdminTable">Volver al tablero de administrador</a>
+    </div>
     <%- include("../partials/footer") %>
 
 </body>

@@ -7,9 +7,9 @@
   
     <%- include("../partials/header") %>
     
-    <div class="admin_createPetBrandCategory">
+    <div class="admin_managePetBrandCategory">
 
-        <section class="creation_form">
+        <section class="manage_form">
 
             <h1>Agregue a una nueva <%= locals.singular %></h1>
 
@@ -34,21 +34,23 @@
                 <% if (locals.created) { %>
                     <% locals.created.forEach(function(i) { %>
                         <li>
-
-                            <p><%= i.name %></p>
-
                             <div>
+                            
+                                <p><%= i.name %></p>
 
-                                <a href="/admin/update/<%= locals.route %>/<%= i.id %>">
-                                    <button><i class="fa-solid fa-pen-to-square"></i></button>
-                                </a>
+                                <div class="buttons">
 
-                                <form action="/admin/delete/<%= locals.route %>/<%= i.id %>?_method=DELETE" method="post">
-                                    <button><i class="fa-solid fa-trash-can"></i></button>
-                                </form>
+                                    <a href="/admin/update/<%= locals.route %>/<%= i.id %>">
+                                        <button><i class="fa-solid fa-pen-to-square"></i></button>
+                                    </a>
+
+                                    <form action="/admin/delete/<%= locals.route %>/<%= i.id %>?_method=DELETE" method="post">
+                                        <button><i class="fa-solid fa-trash-can"></i></button>
+                                    </form>
+
+                                </div>
 
                             </div>
-
                         </li>
                     <% }); %>
                 <% } %>
@@ -58,7 +60,9 @@
 
     </div>
 
-    <a href="/admin/table">Volver al tablero de administrador</a>
+    <div class="return">
+        <a href="/admin/table" class="returnAdminTable">Volver al tablero de administrador</a>
+    </div>
 
     <%- include("../partials/footer") %>
 

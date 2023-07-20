@@ -1,0 +1,92 @@
+.admin_managePetBrandCategory{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 102.5px;
+    padding: 15px;
+}
+
+.admin_managePetBrandCategory h1{
+    font-size: 1.4rem;
+}
+
+.admin_managePetBrandCategory .manage_form form{
+    padding: 5px 10px;
+}
+
+.admin_managePetBrandCategory .manage_form form .form-group{
+    padding-bottom: 5px;
+}
+
+.admin_managePetBrandCategory .manage_form form .form-group input{
+    background-color: white;
+    border: 1.5px solid rgb(73, 73, 73);
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 0.9rem;
+}
+
+.admin_managePetBrandCategory .manage_form form button{
+    border-radius: 3px;
+    border: 1.5px solid gray;
+    padding: 3px 4px;
+    font-size: 0.9rem;
+    background-color: rgba(110, 215, 110, 0.268);
+}
+
+.admin_managePetBrandCategory .list ul{
+    padding-top: 5px;
+    padding-left: 25px;
+    text-align: center;
+}
+
+.admin_managePetBrandCategory .list ul li {
+    margin-bottom: 20px;
+}
+
+.admin_managePetBrandCategory .list ul li div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.admin_managePetBrandCategory .list ul li div .buttons a{
+    margin-right: 10px;
+}
+
+.admin_managePetBrandCategory .list ul li div .buttons a button i{
+    font-size: 1rem;
+    padding: 1px;
+    color: rgb(37, 89, 157);
+}
+
+.admin_managePetBrandCategory .list ul li div .buttons form button i{
+    font-size: 1rem;
+    padding: 1px;
+    color: rgb(206, 3, 3);
+}
+
+div.return{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+div.return a.returnAdminTable{
+    margin-bottom: 10px;
+    background-color: #7fc0e1ac;
+    border: 1.5px solid rgb(41, 41, 41);
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+@media (min-width: 460px){
+    .admin_managePetBrandCategory{
+        margin-top: 0px;
+        text-align: center;
+        justify-content: space-around;
+    }
+}
+
