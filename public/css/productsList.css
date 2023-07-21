@@ -55,6 +55,31 @@ main{
     text-align: center;
     padding: 5px 0px;
 }
+.listadoProductos .productos .producto .buttons{
+    display: flex;
+    flex-wrap: wrap;
+}
+.listadoProductos .productos .producto .buttons button{
+    padding: 2px;
+}
+.listadoProductos .productos .producto .buttons a{
+    padding: 0px 4px 5px 0px;
+}
+.listadoProductos .productos .producto .buttons a button{
+    background-color: rgba(37, 89, 157, 0.188);
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+.listadoProductos .productos .producto .buttons form{
+    padding: 0px 0px 5px 4px;
+}
+.listadoProductos .productos .producto .buttons form button{
+    background-color: rgba(255, 0, 0, 0.255);
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
 
 @media (min-width: 460px){
     main{
