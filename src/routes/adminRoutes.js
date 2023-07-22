@@ -25,5 +25,7 @@ router.put("/update/brand/:id", validationsPBC, adminController.updateBrand);
 router.delete("/delete/brand/:id", adminController.deleteBrand);
 
 router.get("/users", adminController.manageUsers);
+router.put("/update/users/:id", adminController.updateAdminUsers);
+router.delete("/delete/users/:id", adminController.deleteAdminUsers);
 
 module.exports = router;

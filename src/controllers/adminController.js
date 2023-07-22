@@ -189,7 +189,31 @@ const adminController = {
     },
     manageUsers: async (req, res) =>{
       let users = await db.User.findAll();
+      users.forEach(user => {
+        if(user.admin === 1){
+          user.admin = "Administrador";
+        } else{
+          user.admin = "Consumidor";
+        };
+      });
       return res.render("./admin/manageUsers.ejs", {users});
+    },
+    updateAdminUsers: async(req, res) =>{
+      db.User.update(
+        {admin: req.body.admin},
+        {where: {id: req.params.id}}
+      )
+      .then(() =>{
+        return res.redirect('/admin/users');
+      })
+    },
+    deleteAdminUsers: (req, res) =>{
+      db.User.destroy({
+        where: {id: req.params.id}
+      })
+        .then(() =>{
+          res.redirect('/admin/users');
+        })
     }
 };
 
