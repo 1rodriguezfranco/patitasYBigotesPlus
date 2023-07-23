@@ -25,6 +25,12 @@
 
     </main>
 
+    <% if(user.admin === 1){ %>
+        <div class="return">
+            <a href="/admin/table" class="returnAdminTable">Tablero de administrador</a>
+        </div>
+    <% } %>
+
     <%- include("../partials/footer") %>
 
 </body>

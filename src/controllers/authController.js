@@ -110,7 +110,6 @@ const authController = {
     recoverpassword: (req, res) => res.render ("./auth/recoverpassword"), 
 
     profile: (req, res) => { 
-        console.log(req.session.userLogged)
         res.render('./auth/profile', { user : req.session.userLogged})
     },
 

@@ -11,9 +11,10 @@
 
         <section class="manage_form">
 
-            <h1>Agregue a una nueva <%= locals.singular %></h1>
-
             <form action="/admin/create/<%= locals.route %>" id="creation_<%= locals.route %>_form" method="post">
+
+                <h1>Agregue a una nueva <%= locals.singular %></h1>
+
                 <div class="form-group">
                     <label for="name">Nombre de la <%= locals.singular %>:</label>
                     <input type="text" id="name" name="name">

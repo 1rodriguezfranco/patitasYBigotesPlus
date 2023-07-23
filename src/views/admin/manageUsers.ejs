@@ -9,20 +9,20 @@
     
     <div class="admin_manageUsers">
 
+        <h1>Administre los usuarios existentes</h1>
+
         <section class="manage_form">
 
-            <h1>Administre los usuarios existentes</h1>
-
-            <ul>
+            <ul type="none">
                 <% if (locals.users) { %>
                     <% locals.users.forEach(function(i) { %>
                         <li>
                             <div>
                             
-                                <p>E-mail: <%= i.email %></p>
+                                <p><%= i.email %></p>
 
                                 <form action="/admin/update/users/<%= i.id %>?_method=PUT" method="post">
-                                    <label for="admin">Categoria: </label>
+                                    <label for="admin"></label>
                                     <select class="input_manage_admin" name="admin">
                                         <% if(i.admin === "Administrador") { %>
                                             <option value="1" selected>Administrador</option>

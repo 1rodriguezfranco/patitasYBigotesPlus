@@ -1,0 +1,31 @@
+.admin_manageUsers{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 102.5px;
+    padding: 15px;
+    text-align: center;
+}
+
+.admin_manageUsers h1{
+    margin-bottom: 20px;
+}
+
+.admin_manageUsers .manage_form ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.admin_manageUsers .manage_form ul li{
+    text-align: center;
+    padding: 5px 10px;
+    background-color: rgb(247, 244, 244);
+    border: 1.5px solid rgb(73, 73, 73);
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    width: 75%;
+}
+
